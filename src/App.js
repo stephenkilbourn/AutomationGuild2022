@@ -6,7 +6,6 @@ import './App.css';
 
 function App() {
 
-  // const [formComplete, setformComplete] = React.useState(false)
   const [cardNumber, setCardNumber] = React.useState('');
   const [cardHolder, setCardHolder] = React.useState('');
   const [month, setMonth] = React.useState('');
@@ -15,7 +14,7 @@ function App() {
 
   const [isSaving, setIsSaving] = React.useState(false)
 
-  let formComplete = cardNumber.length  && cardHolder && cvv.length && month.length && year.length
+  let formComplete = cardNumber.length  && cardHolder.length && cvv.length && month.length && year.length
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -84,8 +83,10 @@ function App() {
 
         <div className="row">
           <div className="field option__wrapper">
-          
+          <div className="label__wrapper">
             <label htmlFor='expirationMonth'>Expiration Month</label>
+            <label htmlFor='expirationYear'>Expiration Year</label>
+          </div>
             <div className="field__options">
 
               <select
@@ -109,7 +110,6 @@ function App() {
                 <option value="11">11</option>
                 <option value="12">12</option>
               </select>
-              <label htmlFor='expirationYear'>Expiration Year</label>
               <select
                 name="expiration-date-year"
                 id="expirationYear"
@@ -124,6 +124,8 @@ function App() {
                 <option value="2025">2025</option>
               </select>
             </div>
+
+            
           </div>
 
           <div className="field">

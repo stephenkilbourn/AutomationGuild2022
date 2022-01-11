@@ -63,7 +63,6 @@ test.each(Object.entries(fakeUser))("expect submit button to be disabled if %s n
     });
 
     const submitButton = screen.getByText(/submit/i)
-    userEvent.click(submitButton)
     expect(submitButton).toBeDisabled()
 });
 

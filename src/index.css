@@ -218,8 +218,18 @@ button:disabled {
   gap: 20px;
 }
 
+.label__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .option__wrapper {
   flex: 2;
+}
+.option__wrapper > label {
+  text-align: center;
+  font-weight: bold;
 }
 
 select {
